@@ -205,7 +205,10 @@ class MainActivity : Activity() {
         dialog.window?.setBackgroundDrawable(rounded(Color.rgb(13,14,29), 22))
         styleDialogButtons(dialog)
     }
-
+private fun updateText() {
+    preview.mode = selected
+    preview.invalidate()
+}
     private fun styleDialogButtons(dialog: AlertDialog) {
         dialog.getButton(AlertDialog.BUTTON_POSITIVE)?.setTextColor(purple)
         dialog.getButton(AlertDialog.BUTTON_NEGATIVE)?.setTextColor(muted)
